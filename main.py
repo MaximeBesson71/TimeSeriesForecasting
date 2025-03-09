@@ -6,9 +6,10 @@ import time
 import warnings
 from models.BaseModel import BaseModel
 from models.PatchTSTModel import PatchTSTModel
+from models.SCINetModel import SCINetModel
 from darts.datasets import *
-from sklearn.preprocessing import MaxAbsScaler, StandardScaler, MinMaxScaler
-from darts.dataprocessing.transformers import BoxCox, Scaler
+from sklearn.preprocessing import StandardScaler
+from darts.dataprocessing.transformers import Scaler
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -29,6 +30,8 @@ if __name__ == "__main__":
         model_type = BaseModel
     elif args.model == "PatchTSTModel":
         model_type = PatchTSTModel
+    elif args.model == "SCINetModel":
+        model_type = SCINetModel
     else:
         raise ValueError(f"Model {args.model} not implemented")
 

@@ -1,6 +1,6 @@
 from darts.models.forecasting.torch_forecasting_model import PastCovariatesTorchModel
-# Adjust this import based on your environment
 
+import torch
 
 from dataclasses import dataclass
 from modules.PatchTSTModule import PatchTSTModule
