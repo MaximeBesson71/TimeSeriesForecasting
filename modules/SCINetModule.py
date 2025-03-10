@@ -6,6 +6,9 @@ import torch
 import argparse
 import numpy as np
 from torch import Tensor
+from darts.models.forecasting.pl_forecasting_module import (
+    PLPastCovariatesModule,
+    io_processor,)
 
 
 class Splitting(nn.Module):

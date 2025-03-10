@@ -1,5 +1,6 @@
 from modules.BaseModule import _BaseModule
 from darts.models.forecasting.torch_forecasting_model import PastCovariatesTorchModel
+import torch
 
 
 class BaseModel(PastCovariatesTorchModel):
